@@ -1,0 +1,192 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+#titleHeader {
+    text-align: center;
+}
+
+p {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.calculatorDisplay{
+    color: black;
+    padding-right: 10px;
+}
+
+#calculatorContainer {
+    width: 35vw;
+    height: 70vh;
+    background-color: gray;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.calculatorButton {
+    font-weight: 600;
+    color: white;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+#row1 {
+    height: 24%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#row2 {
+    height: 15%;
+    width: 100%;    
+}
+
+#row3 {
+    height: 15%;
+    width: 100%;
+}
+
+#row4 {
+    height: 15%;
+    width: 100%;
+}
+
+#row5 {
+    height: 15%;
+    width: 100%;
+}
+
+#row6 {
+    height: 15%;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+#column1 {
+    width: 98%;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    justify-content: right;
+    background-color: rgb(168, 201, 229);
+}
+
+#column2 {
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#column3 {
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#column4 {
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#column5 {
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#column6 {
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#column7 {
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#column8 {
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#column9 {
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#column10 {
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#column11 {
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#column12 {
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#column13 {
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#column14 {
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#column15 {
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#column16 {
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#column17 {
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#column18 {
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#column19 {
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
