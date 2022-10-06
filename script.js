@@ -28,7 +28,7 @@ let operatorButton = document.querySelectorAll(".operatorButton")
 
 // adding event listener to each button - the return type here is a string
 numberButton.forEach(button => {
-    button.addEventListener("click", e => console.log(e.target.childNodes[0].parentElement.innerText))
+    button.addEventListener("click", e => console.log(parseInt(e.target.childNodes[0].parentElement.innerText)))
 });
 
 operatorButton.forEach(button => {
