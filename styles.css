@@ -25,7 +25,7 @@ p {
     margin: 0 auto;
 }
 
-.calculatorButton {
+.operatorButton, .numberButton {
     font-weight: 600;
     color: white;
 }

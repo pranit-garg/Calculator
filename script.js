@@ -23,7 +23,20 @@ function operator(calculationFunction, num1, num2) {
 }
 
 // setting query selectors for all buttons
-let num0Button = document.querySelector(".num0");
+let numberButton = document.querySelectorAll(".numberButton")
+let operatorButton = document.querySelectorAll(".operatorButton")
+
+// adding event listener to each button - the return type here is a string
+numberButton.forEach(button => {
+    button.addEventListener("click", e => console.log(e.target.childNodes[0].parentElement.innerText))
+});
+
+operatorButton.forEach(button => {
+    button.addEventListener("click", e => console.log(e.target.childNodes[0].parentElement.innerText))
+});
+
+
+/* let num0Button = document.querySelector(".num0");
 let num1Button = document.querySelector(".num1");
 let num2Button = document.querySelector(".num2");
 let num3Button = document.querySelector(".num3");
@@ -40,7 +53,7 @@ let equalsButton = document.querySelector(".equalsButton")
 let multiplyButton = document.querySelector(".multiplyButton")
 let divideButton = document.querySelector(".divideButton")
 let addButton = document.querySelector(".addButton")
-let subtractButton = document.querySelector(".subtractButton")
+let subtractButton = document.querySelector(".subtractButton") 
 
 // adding event listeners for all buttons
 num0Button.addEventListener("click", () => console.log("0"));
@@ -60,4 +73,4 @@ equalsButton.addEventListener("click", () => console.log("="));
 multiplyButton.addEventListener("click", () => console.log("X"));
 divideButton.addEventListener("click", () => console.log("//"));
 addButton.addEventListener("click", () => console.log("+"));
-subtractButton.addEventListener("click", () => console.log("-"));
+subtractButton.addEventListener("click", () => console.log("-")); */
