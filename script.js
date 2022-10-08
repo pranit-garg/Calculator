@@ -1,3 +1,9 @@
+// calculation numbers
+let currentNumber = "";
+let previousNumber = "";
+let operator = "";
+
+
 // four caclulation functions to add, subtract, multiply, and divide
 
 function add(num1, num2) {
@@ -16,26 +22,57 @@ function divide(num1, num2) {
     return num1 / num2;
 }
 
-// operate function
-
-function operator(calculationFunction, num1, num2) {
-    return calculationFunction(num1, num2);
-}
-
 // setting query selectors for all buttons
 let numberButton = document.querySelectorAll(".numberButton")
 let operatorButton = document.querySelectorAll(".operatorButton")
+let contentOnDisplay = document.querySelector(".calculatorDisplay")
 
-// adding event listener to each button - the return type here is a string
 numberButton.forEach(button => {
-    button.addEventListener("click", e => console.log(parseInt(e.target.childNodes[0].parentElement.innerText)))
+    button.addEventListener("click", populateDisplayWithNum1);
 });
+
+/* operatorButton.forEach(button => {
+    button.addEventListener("click", e => console.log(e.target.childNodes[0].parentElement.innerText))
+}); */
 
 operatorButton.forEach(button => {
-    button.addEventListener("click", e => console.log(e.target.childNodes[0].parentElement.innerText))
+    button.addEventListener("click", insertOperator)
 });
 
 
+contentOnDisplay.addEventListener("click", e => {
+    console.log(e.target.innerHTML)
+});
+
+
+function populateDisplayWithNum1(e) {
+    // console.log(parseInt(e.target.childNodes[0].parentElement.innerText));
+    currentNumber += e.target.childNodes[0].parentElement.innerText;
+    contentOnDisplay.innerHTML = currentNumber;
+    //console.log(currentNumber);
+} 
+
+function insertOperator(e) {
+    operator = e.target.childNodes[0].parentElement.innerText;
+}
+
+
+// calculate function function
+function calculate(calculationFunction, num1, num2) {
+    
+    
+    
+    
+    return calculationFunction(num1, num2);
+}
+
+// testing
+console.log(contentOnDisplay.textContent);
+
+
+
+
+// event listener code for testing -> remove at end
 /* let num0Button = document.querySelector(".num0");
 let num1Button = document.querySelector(".num1");
 let num2Button = document.querySelector(".num2");
