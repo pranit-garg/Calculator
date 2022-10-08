@@ -23,9 +23,11 @@ function divide(num1, num2) {
 }
 
 // setting query selectors for all buttons
-let numberButton = document.querySelectorAll(".numberButton")
-let operatorButton = document.querySelectorAll(".operatorButton")
-let contentOnDisplay = document.querySelector(".calculatorDisplay")
+let numberButton = document.querySelectorAll(".numberButton");
+let operatorButton = document.querySelectorAll(".operatorButton");
+let contentOnDisplay = document.querySelector(".calculatorDisplay");
+let previousNumberOnDisplay = document.querySelector(".calculatorDisplayForPreviousNumber");
+let equalsButton = document.querySelector(".equalsButton")
 
 numberButton.forEach(button => {
     button.addEventListener("click", populateDisplayWithNum1);
@@ -38,6 +40,8 @@ numberButton.forEach(button => {
 operatorButton.forEach(button => {
     button.addEventListener("click", insertOperator)
 });
+
+equalsButton.addEventListener("click", evaluate);
 
 
 contentOnDisplay.addEventListener("click", e => {
@@ -54,7 +58,16 @@ function populateDisplayWithNum1(e) {
 
 function insertOperator(e) {
     operator = e.target.childNodes[0].parentElement.innerText;
+    previousNumber = currentNumber;
+    previousNumberOnDisplay.innerHTML = previousNumber;
+    currentNumber = "";
+    contentOnDisplay.innerHTML = currentNumber;
 }
+
+function evaluate() {
+    let result = currentNumber * previousNumber;
+    contentOnDisplay.innerHTML = result;
+} 
 
 
 // calculate function function
