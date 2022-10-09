@@ -28,6 +28,7 @@ let operatorButton = document.querySelectorAll(".operatorButton");
 let contentOnDisplay = document.querySelector(".calculatorDisplay");
 let previousNumberOnDisplay = document.querySelector(".calculatorDisplayForPreviousNumber");
 let equalsButton = document.querySelector(".equalsButton")
+let clearButton = document.querySelector(".clearButton")
 
 numberButton.forEach(button => {
     button.addEventListener("click", populateDisplayWithNum1);
@@ -43,6 +44,7 @@ operatorButton.forEach(button => {
 
 equalsButton.addEventListener("click", evaluate);
 
+clearButton.addEventListener("click", clearScreen);
 
 contentOnDisplay.addEventListener("click", e => {
     console.log(e.target.innerHTML)
@@ -65,19 +67,29 @@ function insertOperator(e) {
 }
 
 function evaluate() {
-    let result = currentNumber * previousNumber;
+    let result;
+    if (operator == "x") {
+       result = previousNumber * currentNumber;
+    } else if (operator == "÷") {
+        result = previousNumber / currentNumber;
+    } else if (operator == "+") {
+        result = parseFloat(previousNumber) + parseFloat(currentNumber);
+    } else if (operator == "-") {
+        result = previousNumber - currentNumber;
+    }
+   
+    previousNumberOnDisplay.innerHTML = `${previousNumber} ${operator} ${currentNumber}`
     contentOnDisplay.innerHTML = result;
-} 
-
-
-// calculate function function
-function calculate(calculationFunction, num1, num2) {
-    
-    
-    
-    
-    return calculationFunction(num1, num2);
+    currentNumber = result;
 }
+
+function clearScreen() {
+    previousNumber = "";
+    currentNumber = "";
+    contentOnDisplay.innerHTML = 0;
+    previousNumberOnDisplay.innerHTML = "";
+}
+
 
 // testing
 console.log(contentOnDisplay.textContent);
