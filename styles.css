@@ -1,6 +1,8 @@
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     box-sizing: border-box;
+    background-image: url("daschund_wallpaper.jpg");
+    background-color: rgb(193, 127, 138);
 }
 
 #titleHeader {
@@ -31,7 +33,17 @@ p.calculatorDisplayForPreviousNumber {
     padding-right: 10px;
 }
 
+.roundCornersScreen {
+    border-radius: 20px;
+}
 
+.roundCorners {
+    border-radius: 10px;
+}
+
+.column:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
 
 .calculatorDisplay, .calculatorDisplayForPreviousNumber{
     color: black;
@@ -39,8 +51,8 @@ p.calculatorDisplayForPreviousNumber {
 }
 
 #calculatorContainer {
-    width: 27vw;
-    height: 70vh;
+    width: 300px;
+    height: 500px;
     background-color: gray;
     padding: 10px;
     margin: 0 auto;
