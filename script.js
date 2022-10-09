@@ -61,11 +61,17 @@ function populateDisplayWithNum1(e) {
 } 
 
 function insertOperator(e) {
+    if (currentNumber !== "" && previousNumber !== "" && operator !== "") {
+        evaluate();
+    }
+
+
     operator = e.target.childNodes[0].parentElement.innerText;
     previousNumber = currentNumber;
     previousNumberOnDisplay.innerHTML = previousNumber;
     currentNumber = "";
     contentOnDisplay.innerHTML = currentNumber;
+
 }
 
 function evaluate() {
@@ -87,6 +93,7 @@ function evaluate() {
     previousNumberOnDisplay.innerHTML = `${previousNumber} ${operator} ${currentNumber}`
     contentOnDisplay.innerHTML = result;
     currentNumber = result;
+    previousNumber = "";
 }
 
 function clearScreen() {
