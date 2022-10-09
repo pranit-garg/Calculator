@@ -46,7 +46,7 @@ p.calculatorDisplayForPreviousNumber {
     margin: 0 auto;
 }
 
-.operatorButton, .numberButton, .equalsButton, .clearButton {
+.operatorButton, .numberButton, .equalsButton, .clearButton, .deleteButton, .decimalButton {
     font-weight: 400;
     color: white;
 }
