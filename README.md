@@ -1,1 +1,1 @@
-The Calculator Assignment for The Odin Project
+The doggie calculator I made for the Odin Project
