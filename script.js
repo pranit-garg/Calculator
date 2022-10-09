@@ -69,7 +69,6 @@ function insertOperator(e) {
     previousNumberOnDisplay.innerHTML = previousNumber;
     currentNumber = "";
     contentOnDisplay.innerHTML = currentNumber;
-
 }
 
 function evaluate() {
@@ -78,20 +77,25 @@ function evaluate() {
         previousNumber = 0;
     }
 
-    if (operator == "x") {
-       result = previousNumber * currentNumber;
-    } else if (operator == "÷") {
-        result = previousNumber / currentNumber;
-    } else if (operator == "+") {
-        result = parseFloat(previousNumber) + parseFloat(currentNumber);
-    } else if (operator == "-") {
-        result = previousNumber - currentNumber;
+    if (currentNumber !== "" && operator !== "" && previousNumber !=="") {
+        if (operator == "x") {
+            result = previousNumber * currentNumber;
+         } else if (operator == "÷") {
+             result = previousNumber / currentNumber;
+             if (result == "Infinity") {
+                result = "Don't divide by 0!c"
+             }
+         } else if (operator == "+") {
+             result = parseFloat(previousNumber) + parseFloat(currentNumber);
+         } else if (operator == "-") {
+             result = previousNumber - currentNumber;
+         }
+        
+         previousNumberOnDisplay.innerHTML = `${previousNumber} ${operator} ${currentNumber}`
+         contentOnDisplay.innerHTML = result;
+         currentNumber = result;
+         previousNumber = "";
     }
-   
-    previousNumberOnDisplay.innerHTML = `${previousNumber} ${operator} ${currentNumber}`
-    contentOnDisplay.innerHTML = result.toFixed(10);
-    currentNumber = result;
-    previousNumber = "";
 }
 
 function clearScreen() {
