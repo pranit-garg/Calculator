@@ -64,8 +64,6 @@ function insertOperator(e) {
     if (currentNumber !== "" && previousNumber !== "" && operator !== "") {
         evaluate();
     }
-
-
     operator = e.target.childNodes[0].parentElement.innerText;
     previousNumber = currentNumber;
     previousNumberOnDisplay.innerHTML = previousNumber;
@@ -91,7 +89,7 @@ function evaluate() {
     }
    
     previousNumberOnDisplay.innerHTML = `${previousNumber} ${operator} ${currentNumber}`
-    contentOnDisplay.innerHTML = result;
+    contentOnDisplay.innerHTML = result.toFixed(10);
     currentNumber = result;
     previousNumber = "";
 }
